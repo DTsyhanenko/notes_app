@@ -1,0 +1,72 @@
+@import './variables';
+@import './resets';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@mixin shadow {
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.add {
+    color: $headline-color;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: $link-color;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.note {
+    background-color: $secondary-color;
+    @include shadow;
+    margin: 30px 20px;
+    height: 400px;
+    width: 400px;
+    border-radius: 3px;
+
+    & .tools {
+        background-color: $link-color;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5rem;
+        border-radius: 3px;
+
+        & button {
+            background-color: transparent;
+            border: none;
+            color: $headline-color;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 0.5rem;
+        }
+    }
+
+    textarea {
+        outline: none;
+        font-family: inherit;
+        font-size: 1.2rem;
+        border: none;
+        height: 400px;
+        width: 100%;
+        padding: 20px;
+        background-color: $secondary-color;
+        color: $text-color;
+        border-radius: 3px;
+    }
+}
+
+.main {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $headline-color;
+}
+
